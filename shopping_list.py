@@ -7,8 +7,7 @@ Make sure your code deals with upper and lower case.
 shopping_list = []
 
 
-def add_shopping_list():
-    item = raw_input("What would you like to add? ")
+def add_shopping_list(item):
     item = item.lower()
     if item not in shopping_list:
         shopping_list.append(item)
@@ -22,8 +21,7 @@ def sorted_shopping_list():
     return shopping_list
 
 
-def remove_item():
-    item = raw_input("What would you like to remove? ")
+def remove_item(item):
     item = item.lower()
     if item in shopping_list:
         shopping_list.remove(item)
@@ -32,24 +30,33 @@ def remove_item():
         print "%s was not on the list." % (item)
 
 def print_menu():
-    while(True):
         print "0 - Main Menu"
         print "1 - Show current list"
         print "2 - Add an item to your shopping list"
         print "3 - Remove item from your shopping list"
-        x = raw_input("What would you like to do? ")
-        if x == "0":
-            print_menu()
-        elif x == "1":
-            print shopping_list
-        elif x == "2":
-            add_shopping_list()
-        elif x == "3":
-            remove_item()
-        elif x == "exit":
-            break
-        else: 
-            print "Please enter a real number"
+        x = int(raw_input("What would you like to do? "))
+        return x
+
+def main():
+    x = print_menu()
+    
+    while True:
+        if x == 0:
+            x = print_menu()
+        elif x == 1:
+            print "This is your current list,", shopping_list
+            x = 0
+        elif x == 2:
+            y = raw_input("What would you like to add? ")
+            add_shopping_list(y)
+            x = 0
+        elif x == 3:
+            y = raw_input("What would you like to remove? ")
+            remove_item(y)
+            x = 0
+        else:
+            print "Please enter a valid item "
+            x = 0
 
 if __name__ == "__main__":
-    print_menu()
+    main()
