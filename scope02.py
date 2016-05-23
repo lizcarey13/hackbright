@@ -2,7 +2,6 @@
 
 
 choice = int(raw_input("What would you like to do? Enter 1 to calculate the tip, and 2 to find the cost per person"))
-print choice
 
 bill_amount = 100
 tip_pct = .15
@@ -18,4 +17,11 @@ def total_bill():
 def split_bill():
 	return total_bill()/number_of_people
 
-print split_bill()
+if choice ==1: 
+	print "Your tip is", calc_tip(), "with a bill total of", total_bill()
+	bill_split = int(raw_input("Would you like the bill split?"))
+	if bill_split == 1:
+		num_ppl = int(raw_input("How many ways should I split the bill?"))
+		return total_bill()/num_ppl
+elif choice == 2:
+	print "The cost per person is", split_bill()
