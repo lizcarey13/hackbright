@@ -25,6 +25,7 @@ food_dictionary = convert_tuple_to_dict(food_price_tuple)
 print (food_dictionary)
 print (food_dictionary['sushi'])
 
-def convert_tuple_to_dict2(tuple_name): 
-	count = 0
- 	food_dict = {x:tuple_name(count+1) for x in tuple_name}
+# Still a work in progress below. 
+# def convert_tuple_to_dict2(tuple_name): 
+# 	count = 0
+#  	food_dict = {x:tuple_name(count+1) for x in tuple_name}
