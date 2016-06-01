@@ -1,0 +1,23 @@
+###Final Project
+----
+
+####Find the unique and total artist count in a survey dataset. 
+
+
+1. Download Data File (file as csv)
+
+respondent ID | name | Age | zipcode | Favorite Music Artist
+---| ---- | ---- | ---- | ---- 
+bigint | string | int | int | huge text string = "My favorite artist is Fetty Wap because I cannot understand any of his lyrics"
+
+2. Import csv into python
+
+3. turn each respondent/row into an object in a class? 
+
+4. turn text box into one string: 
+
+5. remove punctuation, capitalizaiton, symbols, spaces
+
+6. Count number of unique music artists listed, find the strongest correlated word with each artist, find sentiment of each artist/text entry 
+
+7. Summarize survey data by repondent age and zip and gender. 
