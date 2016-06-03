@@ -27,3 +27,6 @@ respondent ID | name | Age | zipcode | Favorite Music Artist | Favorite Music Ar
 bigint | string | int | int | huge text string = "My favorite artist is Fetty Wap because I cannot understand any of his lyrics. Taylor Swift is good because shes cute. Beyoncé is queen." | myfavoriteartistisfettywapbecauseicannotunderstandanyofhislyricstaylorswiftisgoodbecausesheiscutebeyoncisqueen' | [ [fettywap, 1], [taylorswift, 1], [beyonc, 1] ] | .567 | [ [fettywap, 'favorite'], [taylorswift, 'cute'], [beyonc, 'queen'] ] 
 
 8. Summarize survey data by repondent age and zip and gender. 
+
+####*Potential Errors:*
+- Only count each artist per row once, artist may be listed multiple times...should only count artist once per row
